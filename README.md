@@ -1,16 +1,16 @@
-#lava-boutique
+# lava-boutique
 
 a small foray into a firestore app using firebase functions
 
 
-##Requires
+## Requires
 
 ```
 Polymer
 Firebase
 ```
 
-###Configure:
+### Configure:
 
 These Files require API keys there is documentation in them
 
@@ -21,7 +21,7 @@ functions/imdb.js
 *TODO*
 * import this data from config or settings
 
-###Run
+### Run
 First run the Firebase project
 `firebase serve`
 
