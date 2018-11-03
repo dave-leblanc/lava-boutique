@@ -1,0 +1,38 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="email-on-registration">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="circle">e</div>
+      <h1>Email on Registration.</h1>
+      <p>In a modified version of a sample from postmark we show how leveraging email platforms on user registration can be done rather simply.</p>
+    </div>
+  </template>
+
+  <script>
+    class EmailOnRegistration extends Polymer.Element {
+      static get is() { return 'email-on-registration'; }
+    }
+
+    window.customElements.define(EmailOnRegistration.is, EmailOnRegistration);
+  </script>
+</dom-module>

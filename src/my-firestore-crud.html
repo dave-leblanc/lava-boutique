@@ -1,0 +1,67 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="firestore-crud">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="circle">C</div>
+      <h1>Create</h1>
+      <p>Here we can create a record in a Firestore DB collection of ToDo Lists</p>
+      <p>Call this Firebase function as a POST content-type application/json</p>
+      <p>Function requires JSON object with keys Name and Desc with an optional Key for Items a simple array of strings</p>
+      <p>Returns: the ID of the list Created *Keep this you'll need it*</p>
+    </div>
+    <div class="card">
+      <div class="circle">R</div>
+      <h1>Read</h1>
+      <p>Here we can read a record in a Firestore DB collection of ToDo Lists</p>
+      <p>Call this Firebase function as a GET content-type application/json</p>
+      <p>Use URL parameter ?id= to specify the todo-list to fetch</p>
+      <p>Returns: the todo list</p>
+    </div>
+    <div class="card">
+      <div class="circle">U</div>
+      <h1>Update</h1>
+      <p>Here we can create a record in a Firestore DB collection of ToDo Lists</p>
+      <p>Call this Firebase function as a POST content-type application/json</p>
+      <p>Use URL parameter ?id= to specify the todo-list to update</p>
+      <p>Function requires JSON object with any combination of keys Name Desc and Items(a simple array of strings)</p>
+      <p>Items will be added to the existing items</p>
+      <p>Returns: Success or Failure</p>
+    </div>
+    <div class="card">
+      <div class="circle">D</div>
+      <h1>Delete</h1>
+      <p>Here we can create a record in a Firestore DB collection of ToDo Lists</p>
+        <p>Call this Firebase function as a GET content-type application/json</p>
+        <p>Use URL parameter ?id= to specify the todo-list to delete</p>
+      <p>Returns: Success or Failure</p>
+    </div>
+  </template>
+
+  <script>
+    class FirestoreCrud extends Polymer.Element {
+      static get is() { return 'firestore-crud'; }
+    }
+
+    window.customElements.define(FirestoreCrud.is, FirestoreCrud);
+  </script>
+</dom-module>

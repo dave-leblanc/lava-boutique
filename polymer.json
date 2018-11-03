@@ -1,0 +1,36 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/my-app.html",
+  "fragments": [
+    "src/my-firestore-crud.html",
+    "src/my-cud_triggers.html",
+    "src/my-cron_sample.html",
+    "src/my-email_on_registration.html",
+    "src/my-trumps_tweets.html",
+    "src/my-web_hook.html",
+    "src/my-view404.html"
+  ],
+  "sources": [
+    "images/**/*",
+    "src/**/*"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "!bower_components/webcomponentsjs/gulpfile.js",
+    "manifest.json"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  },
+  "builds": [
+    {
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-bundled"
+    },
+    {
+      "preset": "es6-unbundled"
+    }
+  ]
+}

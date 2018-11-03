@@ -1,0 +1,44 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="cron-sample">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="circle">C</div>
+      <h1>Cron</h1>
+      <p>running  "cron" jobs on Firebase is not natively supported.</p>
+      <p>There are 2 ways to achieve this provided by Firebase:</p>
+      <p>Creating an App Engine Shim</p>
+      <p>https://firebase.googleblog.com/2017/03/how-to-schedule-cron-jobs-with-cloud.html</p>
+      <p>and relying on external scheduling services to call HTTP functions</p>
+      <p>https://github.com/firebase/functions-samples/tree/master/delete-unused-accounts-cron</p>
+      <p>Here we are going to take the second approach and simply provide an HTTP function that could be scheduled periodically.</p>
+    </div>
+  </template>
+
+  <script>
+    class CronSample extends Polymer.Element {
+      static get is() { return 'cron-sample'; }
+    }
+
+    window.customElements.define(CronSample.is, CronSample);
+  </script>
+</dom-module>

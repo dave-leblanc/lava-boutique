@@ -1,0 +1,38 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="web-hook">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="circle">G</div>
+      <h1>Git Hub</h1>
+      <p>An execution of a GitHub webhook listener that can be programmed to listen to and resond to any GitHub events</p>
+    </div>
+  </template>
+
+  <script>
+    class WebHook extends Polymer.Element {
+      static get is() { return 'web-hook'; }
+    }
+
+    window.customElements.define(WebHook.is, WebHook);
+  </script>
+</dom-module>
